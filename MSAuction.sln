@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAuction", "MSAuction\MSAuction.csproj", "{B3EECA7E-5339-405F-90C0-926C035F0837}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAuction.Application", "MSAuction.Application\MSAuction.Application.csproj", "{72FC1E07-0B21-4773-A062-3901C7719875}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAuction.Domain", "MSAuction.Domain\MSAuction.Domain.csproj", "{AD488572-22F7-416A-AD70-19883EFB6861}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAuction.Infrastructure", "MSAuction.Infrastructure\MSAuction.Infrastructure.csproj", "{37E8AA88-5C04-4C2E-868C-0F0190FF9CA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAuction.Commons", "MSAuction.Commons\MSAuction.Commons.csproj", "{7226F638-CEE9-4DBB-B61F-FB0815CD66F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAuction.Interfaces", "MSAuction.Interfaces\MSAuction.Interfaces.csproj", "{7CAAE73A-2FBC-4CCE-BCD1-93CC22377E79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3EECA7E-5339-405F-90C0-926C035F0837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3EECA7E-5339-405F-90C0-926C035F0837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3EECA7E-5339-405F-90C0-926C035F0837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3EECA7E-5339-405F-90C0-926C035F0837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72FC1E07-0B21-4773-A062-3901C7719875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72FC1E07-0B21-4773-A062-3901C7719875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72FC1E07-0B21-4773-A062-3901C7719875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72FC1E07-0B21-4773-A062-3901C7719875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD488572-22F7-416A-AD70-19883EFB6861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD488572-22F7-416A-AD70-19883EFB6861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD488572-22F7-416A-AD70-19883EFB6861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD488572-22F7-416A-AD70-19883EFB6861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37E8AA88-5C04-4C2E-868C-0F0190FF9CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E8AA88-5C04-4C2E-868C-0F0190FF9CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E8AA88-5C04-4C2E-868C-0F0190FF9CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E8AA88-5C04-4C2E-868C-0F0190FF9CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7226F638-CEE9-4DBB-B61F-FB0815CD66F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7226F638-CEE9-4DBB-B61F-FB0815CD66F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7226F638-CEE9-4DBB-B61F-FB0815CD66F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7226F638-CEE9-4DBB-B61F-FB0815CD66F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CAAE73A-2FBC-4CCE-BCD1-93CC22377E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CAAE73A-2FBC-4CCE-BCD1-93CC22377E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CAAE73A-2FBC-4CCE-BCD1-93CC22377E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CAAE73A-2FBC-4CCE-BCD1-93CC22377E79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

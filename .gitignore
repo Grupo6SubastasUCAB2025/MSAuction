@@ -1,0 +1,33 @@
+# Archivos generados por compilación en .NET
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Configuración del IDE (Visual Studio, Rider)
+.vs/
+.idea/
+*.sln.DotSettings.user
+*.user
+*.suo
+*.cache
+
+# Dependencias y paquetes
+node_modules/
+package-lock.json
+.vscode/
+
+# Archivos del sistema que no deberían estar en Git
+.DS_Store
+Thumbs.db
+Application Data/
+Cookies/
+Local Settings/
+My Documents/
+NetHood/
+PrintHood/
+Recent/
+SendTo/
+Start Menu/
+Templates/
