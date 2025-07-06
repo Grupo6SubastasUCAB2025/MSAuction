@@ -17,10 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MSAuction.Commons\MSAuction.Commons.csproj" />
-      <ProjectReference Include="..\MSAuction.Domain\MSAuction.Domain.csproj" />
       <ProjectReference Include="..\MSAuction.Infrastructure\MSAuction.Infrastructure.csproj" />
-      <ProjectReference Include="..\MSAuction.Interfaces\MSAuction.Interfaces.csproj" />
     </ItemGroup>
 
 </Project>
