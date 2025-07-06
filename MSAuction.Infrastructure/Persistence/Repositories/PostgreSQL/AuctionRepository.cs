@@ -35,4 +35,20 @@ public class AuctionRepository : IAuctionRepository
         _context.Auctions.Update(auction);
         await _context.SaveChangesAsync();
     }
+    
+    public async Task DeleteAsync(int id)
+    {
+        // Obtén la subasta por su ID de forma asíncrona
+        var auction = await GetByIdAsync(id);
+
+        // Verifica si la subasta existe
+        if (auction == null)
+        {
+            throw new InvalidOperationException("Subasta no encontrada.");
+        }
+
+        // Eliminar la subasta
+        _context.Auctions.Remove(auction);
+        await _context.SaveChangesAsync();
+    }
 }
