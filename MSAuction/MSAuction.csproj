@@ -12,15 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\MSAuction.Application\MSAuction.Application.csproj" />
-      <ProjectReference Include="..\MSAuction.Commons\MSAuction.Commons.csproj" />
-      <ProjectReference Include="..\MSAuction.Domain\MSAuction.Domain.csproj" />
-      <ProjectReference Include="..\MSAuction.Infrastructure\MSAuction.Infrastructure.csproj" />
-      <ProjectReference Include="..\MSAuction.Interfaces\MSAuction.Interfaces.csproj" />
     </ItemGroup>
 
 </Project>
