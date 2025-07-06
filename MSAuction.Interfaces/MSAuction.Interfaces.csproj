@@ -8,9 +8,12 @@
 
     <ItemGroup>
       <Folder Include="EventBus\" />
-      <Folder Include="Persistence\Repositories\Mongo\" />
-      <Folder Include="Persistence\Repositories\PostgreSQL\" />
       <Folder Include="Services\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MSAuction.Commons\MSAuction.Commons.csproj" />
+      <ProjectReference Include="..\MSAuction.Domain\MSAuction.Domain.csproj" />
     </ItemGroup>
 
 </Project>
