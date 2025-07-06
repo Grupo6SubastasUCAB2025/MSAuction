@@ -7,8 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="DTOs\" />
       <Folder Include="Mappers\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MongoDB.Driver" Version="3.4.0" />
     </ItemGroup>
 
 </Project>
