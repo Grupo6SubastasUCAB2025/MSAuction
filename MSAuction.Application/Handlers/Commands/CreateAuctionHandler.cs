@@ -9,6 +9,7 @@ using MediatR;
 using RabbitMQ.Client;
 using Newtonsoft.Json;
 using System.Text;
+using MSAuction.Infrastructure.Services;
 
 public class CreateAuctionHandler : IRequestHandler<CreateAuctionCommand, int>
 {
@@ -38,18 +39,14 @@ public class CreateAuctionHandler : IRequestHandler<CreateAuctionCommand, int>
             Conditions = dto.Conditions,
             Type = "normal"
         };
-
-        // Agregar la subasta a la base de datos para que se genere el ID
+        
         await _repository.AddAsync(auction);
-
-        // El ID de la subasta ya debe estar disponible ahora
+        
         if (auction.Id == 0)
         {
-            // Maneja el caso si no se generó un ID, aunque esto no debería ocurrir si tu repositorio está configurado correctamente
             throw new InvalidOperationException("The auction ID was not generated correctly.");
         }
-
-        // Publicar el evento a RabbitMQ
+        
         var factory = new ConnectionFactory() { HostName = "localhost" };
         try
         {
@@ -60,7 +57,7 @@ public class CreateAuctionHandler : IRequestHandler<CreateAuctionCommand, int>
 
                 var auctionCreatedEvent = new AuctionCreatedEvent
                 {
-                    AuctionId = auction.Id,  // Ahora el ID es válido
+                    AuctionId = auction.Id,  
                     ProductId = auction.ProductId,
                     Title = auction.Title,
                     Description = auction.Description,
@@ -83,15 +80,18 @@ public class CreateAuctionHandler : IRequestHandler<CreateAuctionCommand, int>
         }
         catch (Exception ex)
         {
-            // Log the exception or handle accordingly (retries, alerting, etc.)
             Console.WriteLine($"Error while publishing to RabbitMQ: {ex.Message}");
         }
-
-        // Programar el trabajo en Hangfire para finalizar la subasta
-       /* BackgroundJob.Schedule<AuctionBackgroundService>(
+        
+        BackgroundJob.Schedule<AuctionBackgroundService>(
             x => x.FinalizeAuction(auction.Id),
             auction.EndDate
-        );*/
+        );
+        
+        BackgroundJob.Schedule<AuctionBackgroundService>(
+            x => x.ActivateAuction(auction.Id),
+            auction.StartDate
+        );
 
         return auction.Id; // Ahora deberías devolver el ID correcto
     }
