@@ -30,15 +30,12 @@ public class UpdateAuctionHandler : IRequestHandler<UpdateAuctionCommand, bool>
         }
 
         // Actualizar los campos
+        auction.ProductId = request.AuctionDto.ProductId;
         auction.Title = request.AuctionDto.Title;
         auction.Description = request.AuctionDto.Description;
         auction.InitialPrice = request.AuctionDto.InitialPrice;
         auction.MinIncrement = request.AuctionDto.MinIncrement;
         auction.ReservePrice = request.AuctionDto.ReservePrice;
-        auction.Conditions = request.AuctionDto.Conditions;
-        auction.Type = request.AuctionDto.Type;
-        auction.StartDate = request.AuctionDto.StartTime;
-        auction.EndDate = request.AuctionDto.EndTime;
 
         // Guardar los cambios
         await _repository.UpdateAsync(auction);
@@ -46,10 +43,14 @@ public class UpdateAuctionHandler : IRequestHandler<UpdateAuctionCommand, bool>
         var auctionUpdatedEvent = new AuctionUpdatedEvent
         {
             AuctionId = auction.Id,
+            ProductId = auction.ProductId,
             Title = auction.Title,
+            Description = auction.Description,
             InitialPrice = auction.InitialPrice,
-            EndDate = auction.EndDate,
-            Status = auction.Status
+            MinIncrement = auction.MinIncrement,
+            ReservePrice = auction.ReservePrice,
+            Status = auction.Status,
+            UserId = auction.UserId
         };
 
         return true;
