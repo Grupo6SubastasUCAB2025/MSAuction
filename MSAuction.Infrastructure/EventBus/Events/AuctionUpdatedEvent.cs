@@ -3,8 +3,12 @@
 public class AuctionUpdatedEvent
 {
     public int AuctionId { get; set; }
-    public string? Title { get; set; }
+    public int ProductId { get; set; }
+    public required string Title { get; set; }
+    public string? Description { get; set; }
     public decimal InitialPrice { get; set; }
-    public DateTime EndDate { get; set; }
-    public string? Status { get; set; }
+    public decimal MinIncrement { get; set; }
+    public decimal? ReservePrice { get; set; }
+    public required string Status { get; set; }
+    public required int UserId { get; set; }
 }
